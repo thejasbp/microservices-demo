@@ -1,0 +1,1214 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "id": 7,
+  "iteration": 1744226131623,
+  "links": [],
+  "panels": [
+    {
+      "datasource": "prometheus",
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-BlPu"
+          },
+          "decimals": 3,
+          "mappings": [],
+          "max": 5,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "percent"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 3,
+        "x": 0,
+        "y": 0
+      },
+      "id": 2,
+      "maxPerRow": 8,
+      "options": {
+        "displayMode": "gradient",
+        "orientation": "vertical",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showUnfilled": true,
+        "text": {}
+      },
+      "pluginVersion": "7.5.5",
+      "repeat": "podname",
+      "repeatDirection": "h",
+      "scopedVars": {
+        "podname": {
+          "selected": false,
+          "text": "carts-7c49d575c5-skvdl",
+          "value": "carts-7c49d575c5-skvdl"
+        }
+      },
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "sum(container_memory_usage_bytes{pod=\"$podname\", namespace=\"sock-shop\"}) \n/\n(sum(node_memory_MemTotal_bytes)) \n* 100\n",
+          "interval": "",
+          "legendFormat": "",
+          "queryType": "randomWalk",
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "$podname",
+      "type": "bargauge"
+    },
+    {
+      "datasource": "prometheus",
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-BlPu"
+          },
+          "decimals": 3,
+          "mappings": [],
+          "max": 5,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "percent"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 3,
+        "x": 3,
+        "y": 0
+      },
+      "id": 3,
+      "maxPerRow": 8,
+      "options": {
+        "displayMode": "gradient",
+        "orientation": "vertical",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showUnfilled": true,
+        "text": {}
+      },
+      "pluginVersion": "7.5.5",
+      "repeatDirection": "h",
+      "repeatIteration": 1744226131623,
+      "repeatPanelId": 2,
+      "scopedVars": {
+        "podname": {
+          "selected": false,
+          "text": "carts-db-756d97b4c7-kgtww",
+          "value": "carts-db-756d97b4c7-kgtww"
+        }
+      },
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "sum(container_memory_usage_bytes{pod=\"$podname\", namespace=\"sock-shop\"}) \n/\n(sum(node_memory_MemTotal_bytes)) \n* 100\n",
+          "interval": "",
+          "legendFormat": "",
+          "queryType": "randomWalk",
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "$podname",
+      "type": "bargauge"
+    },
+    {
+      "datasource": "prometheus",
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-BlPu"
+          },
+          "decimals": 3,
+          "mappings": [],
+          "max": 5,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "percent"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 3,
+        "x": 6,
+        "y": 0
+      },
+      "id": 4,
+      "maxPerRow": 8,
+      "options": {
+        "displayMode": "gradient",
+        "orientation": "vertical",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showUnfilled": true,
+        "text": {}
+      },
+      "pluginVersion": "7.5.5",
+      "repeatDirection": "h",
+      "repeatIteration": 1744226131623,
+      "repeatPanelId": 2,
+      "scopedVars": {
+        "podname": {
+          "selected": false,
+          "text": "catalogue-65846bbd84-m7m9x",
+          "value": "catalogue-65846bbd84-m7m9x"
+        }
+      },
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "sum(container_memory_usage_bytes{pod=\"$podname\", namespace=\"sock-shop\"}) \n/\n(sum(node_memory_MemTotal_bytes)) \n* 100\n",
+          "interval": "",
+          "legendFormat": "",
+          "queryType": "randomWalk",
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "$podname",
+      "type": "bargauge"
+    },
+    {
+      "datasource": "prometheus",
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-BlPu"
+          },
+          "decimals": 3,
+          "mappings": [],
+          "max": 5,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "percent"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 3,
+        "x": 9,
+        "y": 0
+      },
+      "id": 5,
+      "maxPerRow": 8,
+      "options": {
+        "displayMode": "gradient",
+        "orientation": "vertical",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showUnfilled": true,
+        "text": {}
+      },
+      "pluginVersion": "7.5.5",
+      "repeatDirection": "h",
+      "repeatIteration": 1744226131623,
+      "repeatPanelId": 2,
+      "scopedVars": {
+        "podname": {
+          "selected": false,
+          "text": "catalogue-db-6ddbf89f68-mb27p",
+          "value": "catalogue-db-6ddbf89f68-mb27p"
+        }
+      },
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "sum(container_memory_usage_bytes{pod=\"$podname\", namespace=\"sock-shop\"}) \n/\n(sum(node_memory_MemTotal_bytes)) \n* 100\n",
+          "interval": "",
+          "legendFormat": "",
+          "queryType": "randomWalk",
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "$podname",
+      "type": "bargauge"
+    },
+    {
+      "datasource": "prometheus",
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-BlPu"
+          },
+          "decimals": 3,
+          "mappings": [],
+          "max": 5,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "percent"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 3,
+        "x": 12,
+        "y": 0
+      },
+      "id": 6,
+      "maxPerRow": 8,
+      "options": {
+        "displayMode": "gradient",
+        "orientation": "vertical",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showUnfilled": true,
+        "text": {}
+      },
+      "pluginVersion": "7.5.5",
+      "repeatDirection": "h",
+      "repeatIteration": 1744226131623,
+      "repeatPanelId": 2,
+      "scopedVars": {
+        "podname": {
+          "selected": false,
+          "text": "front-end-5786bd55b5-mfrss",
+          "value": "front-end-5786bd55b5-mfrss"
+        }
+      },
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "sum(container_memory_usage_bytes{pod=\"$podname\", namespace=\"sock-shop\"}) \n/\n(sum(node_memory_MemTotal_bytes)) \n* 100\n",
+          "interval": "",
+          "legendFormat": "",
+          "queryType": "randomWalk",
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "$podname",
+      "type": "bargauge"
+    },
+    {
+      "datasource": "prometheus",
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-BlPu"
+          },
+          "decimals": 3,
+          "mappings": [],
+          "max": 5,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "percent"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 3,
+        "x": 15,
+        "y": 0
+      },
+      "id": 7,
+      "maxPerRow": 8,
+      "options": {
+        "displayMode": "gradient",
+        "orientation": "vertical",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showUnfilled": true,
+        "text": {}
+      },
+      "pluginVersion": "7.5.5",
+      "repeatDirection": "h",
+      "repeatIteration": 1744226131623,
+      "repeatPanelId": 2,
+      "scopedVars": {
+        "podname": {
+          "selected": false,
+          "text": "orders-5cbc946865-r7vr5",
+          "value": "orders-5cbc946865-r7vr5"
+        }
+      },
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "sum(container_memory_usage_bytes{pod=\"$podname\", namespace=\"sock-shop\"}) \n/\n(sum(node_memory_MemTotal_bytes)) \n* 100\n",
+          "interval": "",
+          "legendFormat": "",
+          "queryType": "randomWalk",
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "$podname",
+      "type": "bargauge"
+    },
+    {
+      "datasource": "prometheus",
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-BlPu"
+          },
+          "decimals": 3,
+          "mappings": [],
+          "max": 5,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "percent"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 3,
+        "x": 18,
+        "y": 0
+      },
+      "id": 8,
+      "maxPerRow": 8,
+      "options": {
+        "displayMode": "gradient",
+        "orientation": "vertical",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showUnfilled": true,
+        "text": {}
+      },
+      "pluginVersion": "7.5.5",
+      "repeatDirection": "h",
+      "repeatIteration": 1744226131623,
+      "repeatPanelId": 2,
+      "scopedVars": {
+        "podname": {
+          "selected": false,
+          "text": "orders-db-56bf685bc7-455m9",
+          "value": "orders-db-56bf685bc7-455m9"
+        }
+      },
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "sum(container_memory_usage_bytes{pod=\"$podname\", namespace=\"sock-shop\"}) \n/\n(sum(node_memory_MemTotal_bytes)) \n* 100\n",
+          "interval": "",
+          "legendFormat": "",
+          "queryType": "randomWalk",
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "$podname",
+      "type": "bargauge"
+    },
+    {
+      "datasource": "prometheus",
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-BlPu"
+          },
+          "decimals": 3,
+          "mappings": [],
+          "max": 5,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "percent"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 3,
+        "x": 21,
+        "y": 0
+      },
+      "id": 9,
+      "maxPerRow": 8,
+      "options": {
+        "displayMode": "gradient",
+        "orientation": "vertical",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showUnfilled": true,
+        "text": {}
+      },
+      "pluginVersion": "7.5.5",
+      "repeatDirection": "h",
+      "repeatIteration": 1744226131623,
+      "repeatPanelId": 2,
+      "scopedVars": {
+        "podname": {
+          "selected": false,
+          "text": "payment-7dcb77675f-rcxdm",
+          "value": "payment-7dcb77675f-rcxdm"
+        }
+      },
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "sum(container_memory_usage_bytes{pod=\"$podname\", namespace=\"sock-shop\"}) \n/\n(sum(node_memory_MemTotal_bytes)) \n* 100\n",
+          "interval": "",
+          "legendFormat": "",
+          "queryType": "randomWalk",
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "$podname",
+      "type": "bargauge"
+    },
+    {
+      "datasource": "prometheus",
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-BlPu"
+          },
+          "decimals": 3,
+          "mappings": [],
+          "max": 5,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "percent"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 3,
+        "x": 0,
+        "y": 9
+      },
+      "id": 10,
+      "maxPerRow": 8,
+      "options": {
+        "displayMode": "gradient",
+        "orientation": "vertical",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showUnfilled": true,
+        "text": {}
+      },
+      "pluginVersion": "7.5.5",
+      "repeatDirection": "h",
+      "repeatIteration": 1744226131623,
+      "repeatPanelId": 2,
+      "scopedVars": {
+        "podname": {
+          "selected": false,
+          "text": "queue-master-5fd58d46cf-lxxf6",
+          "value": "queue-master-5fd58d46cf-lxxf6"
+        }
+      },
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "sum(container_memory_usage_bytes{pod=\"$podname\", namespace=\"sock-shop\"}) \n/\n(sum(node_memory_MemTotal_bytes)) \n* 100\n",
+          "interval": "",
+          "legendFormat": "",
+          "queryType": "randomWalk",
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "$podname",
+      "type": "bargauge"
+    },
+    {
+      "datasource": "prometheus",
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-BlPu"
+          },
+          "decimals": 3,
+          "mappings": [],
+          "max": 5,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "percent"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 3,
+        "x": 3,
+        "y": 9
+      },
+      "id": 11,
+      "maxPerRow": 8,
+      "options": {
+        "displayMode": "gradient",
+        "orientation": "vertical",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showUnfilled": true,
+        "text": {}
+      },
+      "pluginVersion": "7.5.5",
+      "repeatDirection": "h",
+      "repeatIteration": 1744226131623,
+      "repeatPanelId": 2,
+      "scopedVars": {
+        "podname": {
+          "selected": false,
+          "text": "rabbitmq-77498655bd-nqvnc",
+          "value": "rabbitmq-77498655bd-nqvnc"
+        }
+      },
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "sum(container_memory_usage_bytes{pod=\"$podname\", namespace=\"sock-shop\"}) \n/\n(sum(node_memory_MemTotal_bytes)) \n* 100\n",
+          "interval": "",
+          "legendFormat": "",
+          "queryType": "randomWalk",
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "$podname",
+      "type": "bargauge"
+    },
+    {
+      "datasource": "prometheus",
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-BlPu"
+          },
+          "decimals": 3,
+          "mappings": [],
+          "max": 5,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "percent"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 3,
+        "x": 6,
+        "y": 9
+      },
+      "id": 12,
+      "maxPerRow": 8,
+      "options": {
+        "displayMode": "gradient",
+        "orientation": "vertical",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showUnfilled": true,
+        "text": {}
+      },
+      "pluginVersion": "7.5.5",
+      "repeatDirection": "h",
+      "repeatIteration": 1744226131623,
+      "repeatPanelId": 2,
+      "scopedVars": {
+        "podname": {
+          "selected": false,
+          "text": "session-db-d599c85c4-p59dg",
+          "value": "session-db-d599c85c4-p59dg"
+        }
+      },
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "sum(container_memory_usage_bytes{pod=\"$podname\", namespace=\"sock-shop\"}) \n/\n(sum(node_memory_MemTotal_bytes)) \n* 100\n",
+          "interval": "",
+          "legendFormat": "",
+          "queryType": "randomWalk",
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "$podname",
+      "type": "bargauge"
+    },
+    {
+      "datasource": "prometheus",
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-BlPu"
+          },
+          "decimals": 3,
+          "mappings": [],
+          "max": 5,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "percent"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 3,
+        "x": 9,
+        "y": 9
+      },
+      "id": 13,
+      "maxPerRow": 8,
+      "options": {
+        "displayMode": "gradient",
+        "orientation": "vertical",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showUnfilled": true,
+        "text": {}
+      },
+      "pluginVersion": "7.5.5",
+      "repeatDirection": "h",
+      "repeatIteration": 1744226131623,
+      "repeatPanelId": 2,
+      "scopedVars": {
+        "podname": {
+          "selected": false,
+          "text": "shipping-6467bbbf7c-htbww",
+          "value": "shipping-6467bbbf7c-htbww"
+        }
+      },
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "sum(container_memory_usage_bytes{pod=\"$podname\", namespace=\"sock-shop\"}) \n/\n(sum(node_memory_MemTotal_bytes)) \n* 100\n",
+          "interval": "",
+          "legendFormat": "",
+          "queryType": "randomWalk",
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "$podname",
+      "type": "bargauge"
+    },
+    {
+      "datasource": "prometheus",
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-BlPu"
+          },
+          "decimals": 3,
+          "mappings": [],
+          "max": 5,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "percent"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 3,
+        "x": 12,
+        "y": 9
+      },
+      "id": 14,
+      "maxPerRow": 8,
+      "options": {
+        "displayMode": "gradient",
+        "orientation": "vertical",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showUnfilled": true,
+        "text": {}
+      },
+      "pluginVersion": "7.5.5",
+      "repeatDirection": "h",
+      "repeatIteration": 1744226131623,
+      "repeatPanelId": 2,
+      "scopedVars": {
+        "podname": {
+          "selected": false,
+          "text": "user-76f9fbd78f-k2872",
+          "value": "user-76f9fbd78f-k2872"
+        }
+      },
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "sum(container_memory_usage_bytes{pod=\"$podname\", namespace=\"sock-shop\"}) \n/\n(sum(node_memory_MemTotal_bytes)) \n* 100\n",
+          "interval": "",
+          "legendFormat": "",
+          "queryType": "randomWalk",
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "$podname",
+      "type": "bargauge"
+    },
+    {
+      "datasource": "prometheus",
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-BlPu"
+          },
+          "decimals": 3,
+          "mappings": [],
+          "max": 5,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "percent"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 3,
+        "x": 15,
+        "y": 9
+      },
+      "id": 15,
+      "maxPerRow": 8,
+      "options": {
+        "displayMode": "gradient",
+        "orientation": "vertical",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showUnfilled": true,
+        "text": {}
+      },
+      "pluginVersion": "7.5.5",
+      "repeatDirection": "h",
+      "repeatIteration": 1744226131623,
+      "repeatPanelId": 2,
+      "scopedVars": {
+        "podname": {
+          "selected": false,
+          "text": "user-db-7cc8f9d555-8d9sf",
+          "value": "user-db-7cc8f9d555-8d9sf"
+        }
+      },
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "sum(container_memory_usage_bytes{pod=\"$podname\", namespace=\"sock-shop\"}) \n/\n(sum(node_memory_MemTotal_bytes)) \n* 100\n",
+          "interval": "",
+          "legendFormat": "",
+          "queryType": "randomWalk",
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "$podname",
+      "type": "bargauge"
+    }
+  ],
+  "schemaVersion": 27,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": [
+      {
+        "allValue": "All",
+        "current": {
+          "selected": true,
+          "tags": [],
+          "text": [
+            "All"
+          ],
+          "value": [
+            "$__all"
+          ]
+        },
+        "datasource": "prometheus",
+        "definition": "label_values(kube_pod_info{namespace=\"sock-shop\"}, pod)",
+        "description": null,
+        "error": null,
+        "hide": 0,
+        "includeAll": true,
+        "label": null,
+        "multi": true,
+        "name": "podname",
+        "options": [
+          {
+            "selected": true,
+            "text": "All",
+            "value": "$__all"
+          },
+          {
+            "selected": false,
+            "text": "carts-7c49d575c5-skvdl",
+            "value": "carts-7c49d575c5-skvdl"
+          },
+          {
+            "selected": false,
+            "text": "carts-db-756d97b4c7-kgtww",
+            "value": "carts-db-756d97b4c7-kgtww"
+          },
+          {
+            "selected": false,
+            "text": "catalogue-65846bbd84-m7m9x",
+            "value": "catalogue-65846bbd84-m7m9x"
+          },
+          {
+            "selected": false,
+            "text": "catalogue-db-6ddbf89f68-mb27p",
+            "value": "catalogue-db-6ddbf89f68-mb27p"
+          },
+          {
+            "selected": false,
+            "text": "front-end-5786bd55b5-mfrss",
+            "value": "front-end-5786bd55b5-mfrss"
+          },
+          {
+            "selected": false,
+            "text": "orders-5cbc946865-r7vr5",
+            "value": "orders-5cbc946865-r7vr5"
+          },
+          {
+            "selected": false,
+            "text": "orders-db-56bf685bc7-455m9",
+            "value": "orders-db-56bf685bc7-455m9"
+          },
+          {
+            "selected": false,
+            "text": "payment-7dcb77675f-rcxdm",
+            "value": "payment-7dcb77675f-rcxdm"
+          },
+          {
+            "selected": false,
+            "text": "queue-master-5fd58d46cf-lxxf6",
+            "value": "queue-master-5fd58d46cf-lxxf6"
+          },
+          {
+            "selected": false,
+            "text": "rabbitmq-77498655bd-nqvnc",
+            "value": "rabbitmq-77498655bd-nqvnc"
+          },
+          {
+            "selected": false,
+            "text": "session-db-d599c85c4-p59dg",
+            "value": "session-db-d599c85c4-p59dg"
+          },
+          {
+            "selected": false,
+            "text": "shipping-6467bbbf7c-htbww",
+            "value": "shipping-6467bbbf7c-htbww"
+          },
+          {
+            "selected": false,
+            "text": "user-76f9fbd78f-k2872",
+            "value": "user-76f9fbd78f-k2872"
+          },
+          {
+            "selected": false,
+            "text": "user-db-7cc8f9d555-8d9sf",
+            "value": "user-db-7cc8f9d555-8d9sf"
+          }
+        ],
+        "query": {
+          "query": "label_values(kube_pod_info{namespace=\"sock-shop\"}, pod)",
+          "refId": "StandardVariableQuery"
+        },
+        "refresh": 0,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      }
+    ]
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "Memoery Utilization",
+  "uid": "jhJIA00Hz",
+  "version": 4
+}
