@@ -1,0 +1,104 @@
+{
+  "datasource": "prometheus",
+  "fieldConfig": {
+    "defaults": {
+      "thresholds": {
+        "mode": "absolute",
+        "steps": [
+          {
+            "value": null,
+            "color": "green"
+          },
+          {
+            "value": 80,
+            "color": "red"
+          }
+        ]
+      },
+      "mappings": [],
+      "color": {
+        "mode": "continuous-BlYlRd"
+      },
+      "unit": "decmbytes"
+    },
+    "overrides": []
+  },
+  "gridPos": {
+    "h": 17,
+    "w": 24,
+    "x": 0,
+    "y": 0
+  },
+  "id": 23763571993,
+  "pluginVersion": "7.5.5",
+  "targets": [
+    {
+      "expr": "sum by (pod,instance) (\n  container_memory_usage_bytes{namespace=\"sock-shop\", container!=\"\"}\n) / (1024 * 1024)\n",
+      "legendFormat": "{{instance}}",
+      "interval": "",
+      "exemplar": false,
+      "format": "time_series",
+      "hide": false,
+      "instant": false,
+      "intervalFactor": 1,
+      "queryType": "randomWalk",
+      "refId": "A"
+    },
+    {
+      "expr": "sort_desc(sum by (pod) (container_memory_usage_bytes{namespace=\"sock-shop\"}))\n\n",
+      "legendFormat": "",
+      "interval": "",
+      "exemplar": false,
+      "format": "time_series",
+      "hide": true,
+      "instant": false,
+      "intervalFactor": 1,
+      "queryType": "randomWalk",
+      "refId": "B"
+    },
+    {
+      "expr": "sort_desc(sum(container_memory_usage_bytes{namespace=\"sock-shop\"}) by (pod))\n\n",
+      "legendFormat": "",
+      "interval": "",
+      "exemplar": false,
+      "format": "time_series",
+      "hide": true,
+      "instant": false,
+      "intervalFactor": 1,
+      "queryType": "randomWalk",
+      "refId": "C"
+    }
+  ],
+  "title": "Panel Title",
+  "transformations": [
+    {
+      "id": "labelsToFields",
+      "options": {
+        "valueLabel": "pod"
+      }
+    },
+    {
+      "id": "sortBy",
+      "options": {}
+    }
+  ],
+  "transparent": true,
+  "type": "bargauge",
+  "repeat": null,
+  "description": "",
+  "timeFrom": null,
+  "timeShift": null,
+  "options": {
+    "reduceOptions": {
+      "values": false,
+      "calcs": [
+        "lastNotNull"
+      ],
+      "fields": ""
+    },
+    "orientation": "horizontal",
+    "text": {},
+    "displayMode": "gradient",
+    "showUnfilled": true
+  }
+}
